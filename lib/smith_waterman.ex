@@ -1,4 +1,8 @@
 defmodule SmithWaterman do
+  @moduledoc """
+  Documentation regarding the program goes here.
+  """
+
   def scoreRatio(subject, query, threshold \\ 0.7, verbose \\ false) do
     subject_length = String.length(subject)
     query_length = String.length(query)

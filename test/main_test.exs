@@ -1,4 +1,5 @@
 defmodule SmithWaterman.MainTest do
+  @moduledoc false
   use ExUnit.Case
 
   describe "limited testing" do
