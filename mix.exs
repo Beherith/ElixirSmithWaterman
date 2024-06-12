@@ -64,7 +64,8 @@ defmodule SmithWaterman.MixProject do
     [
       {:excoveralls, "~> 0.13", only: :test},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
+      {:benchee, "~> 1.0", only: :dev}
     ]
   end
 
@@ -82,6 +83,9 @@ defmodule SmithWaterman.MixProject do
 
   defp aliases do
     [
+      benchmark: [
+        "run benchmark/benchmark.exs"
+      ],
       release: [
         "cmd git tag v#{@version}",
         "cmd git push",
