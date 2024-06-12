@@ -8,8 +8,10 @@ defmodule SmithWaterman.MainTest do
     assert SmithWaterman.score_ratio(testa, testb, 0.7) == 0.6111111111111112
 
     testa = "This implementation doesnt perform the traceback, although it could"
+
     testb =
       "the implementation details perform the perform yeah this text is just here to test things"
+
     assert SmithWaterman.score_ratio(testa, testb, 0.7) == 0.13432835820895522
 
     # Test identical
