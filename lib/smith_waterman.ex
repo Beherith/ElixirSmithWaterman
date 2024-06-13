@@ -53,7 +53,7 @@ defmodule SmithWaterman do
         current = Enum.map(top, fn t -> max(0, t + gap) end)
 
         # Substitutions from top_left
-        # c[i] = max(c[i], t[i-1] + (match if q==subject char else mismatch))
+        # c[i] = max(c[i], t[i-1] + (match if q==subject_char else mismatch))
         # find and sum matches
         top_left =
           Enum.zip(Enum.take(top, query_length), query)
