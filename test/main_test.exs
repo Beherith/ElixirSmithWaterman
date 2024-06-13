@@ -5,17 +5,18 @@ defmodule SmithWaterman.MainTest do
   describe "limited testing" do
     testa = "this is not a test"
     testb = "this is indeed a test"
+    assert SmithWaterman.score_ratio(testa, testb, 0.7) == 0.6111111111111112
 
-    assert SmithWaterman.scoreRatio(testa, testb, 0.7, false)
+    testa = "This implementation doesnt perform the traceback, although it could"
 
+    testb =
+      "the implementation details perform the perform yeah this text is just here to test things"
 
-    # Example usage
-    seqa = "This implementation doesnt perform the traceback, although it could"
-    seqb = "the implementation details perform the perform yeah this text is just here to test things"
-    assert SmithWaterman.scoreRatio(seqa, seqb, 0.7, false)
+    assert SmithWaterman.score_ratio(testa, testb, 0.7) == 0.13432835820895522
 
-    # {time,res} = :timer.tc(SmithWaterman, :scoreRatio, [seqa, seqb, 0.7, false])
-    # IO.puts("Microsenconds #{time} #{res}")
-
+    # Test identical
+    testa = "This implementation doesnt perform the traceback, although it could"
+    testb = "This implementation doesnt perform the traceback, although it could"
+    assert SmithWaterman.score_ratio(testa, testb, 0.7) == 1.0
   end
 end

@@ -1,0 +1,6 @@
+first runs the functions for a given warmup time without recording the results, to simulate a "warm"/running system
+deviation - standard deviation (how much do the results vary), given as a percentage of the average (raw absolute values also available)
+mode - the measured values that occur the most. Often one value, but can be multiple values if they occur exactly as often. If no value occurs at least twice, this value will be nil.
+Sit sit ut est. Aut ipsam optio dolor. Explicabo non ut voluptates quibusdam.
+Explicabo porro laudantium et voluptatem quos magnam ad a. Recusandae sed odit qui. Ratione ut et distinctio. Voluptas error veritatis porro consequatur eius. Quo qui eveniet nemo.
+Short sentence
