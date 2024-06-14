@@ -40,5 +40,8 @@ def deps do
 end
 ```
 
+## Benchmarking
+You can run the benchmarks with `mix benchmark`.
+
 ## Possible Improvements
 [ ] Compare any two lists of items where the equality operator is supported.
