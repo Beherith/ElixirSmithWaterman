@@ -22,10 +22,12 @@ defmodule SmithWaterman do
         Logger.debug("Bailing because query is too long")
         0
       else
-        max_score = case method do
-          :lists -> score_sw_lists(subject, query, 1, -1, -1)
-          :op_lists -> score_sw_optimised_lists(subject, query, 1, -1, -1)
-        end
+        max_score =
+          case method do
+            :lists -> score_sw_lists(subject, query, 1, -1, -1)
+            :op_lists -> score_sw_optimised_lists(subject, query, 1, -1, -1)
+          end
+
         max_score_ratio = max_score / highest_possible_score
 
         Logger.debug(
@@ -117,7 +119,9 @@ defmodule SmithWaterman do
         # max top_left and current
         [_ | current_tail] = current_row
 
-        current_row = [0 | Enum.zip(current_tail, top_left) |> Enum.map(fn {c, t} -> max(c, t) end)]
+        current_row = [
+          0 | Enum.zip(current_tail, top_left) |> Enum.map(fn {c, t} -> max(c, t) end)
+        ]
 
         # finally gap left
         # c[i] = max(c[i-1] + gap, c[i])

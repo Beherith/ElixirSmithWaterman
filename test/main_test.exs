@@ -11,6 +11,7 @@ defmodule SmithWaterman.MainTest do
 
     test "mid" do
       subject = "This implementation doesnt perform the traceback, although it could"
+
       query =
         "the implementation details perform the perform yeah this text is just here to test things"
 
@@ -33,6 +34,7 @@ defmodule SmithWaterman.MainTest do
 
     test "mid" do
       subject = "This implementation doesnt perform the traceback, although it could"
+
       query =
         "the implementation details perform the perform yeah this text is just here to test things"
 
